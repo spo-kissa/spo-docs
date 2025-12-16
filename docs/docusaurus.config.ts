@@ -50,7 +50,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/spo-kissa/spo-kissa.github.io/tree/main/',
+            'https://github.com/spo-kissa/spo-kissa.github.io/tree/main/docs/',
         },
         blog: {
           showReadingTime: true,
@@ -61,7 +61,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/spo-kissa/spo-kissa.github.io/tree/main/',
+            'https://github.com/spo-kissa/spo-kissa.github.io/tree/main/docs/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -78,11 +78,11 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/Pteranodon-social-card.jpg',
     navbar: {
-      title: 'Pteranodon Starter',
+      title: 'SPO Kissa Documentation',
       logo: {
-        alt: 'Pteranodon Logo',
+        alt: 'SPO Kissa Logo',
         // src: 'img/logo.svg',
-        src: 'img/Pteranodon.png',
+        src: 'img/spo-kissa.png',
       },
       items: [
         {
