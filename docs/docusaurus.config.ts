@@ -15,7 +15,7 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://sunwood-ai-labs.github.io',
+  url: 'https://docs.spo-kissa.org',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -23,11 +23,15 @@ const config: Config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'spo-kissa', // Usually your GitHub org/user name.
-  projectName: 'spo-docs', // Usually your repo name.
+  projectName: 'spo-kissa.github.io', // Usually your repo name.
   trailingSlash: false,
 
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -46,7 +50,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/spo-kissa/spo-docs/tree/main/',
+            'https://github.com/spo-kissa/spo-kissa.github.io/tree/main/',
         },
         blog: {
           showReadingTime: true,
@@ -57,7 +61,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/spo-kissa/spo-docs/tree/main/',
+            'https://github.com/spo-kissa/spo-kissa.github.io/tree/main/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -89,7 +93,7 @@ const config: Config = {
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/spo-kissa/spo-docs',
+          href: 'https://github.com/spo-kissa/spo-kissa.github.io',
           label: 'GitHub',
           position: 'right',
         },
@@ -102,6 +106,10 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
+              label: 'Home Page',
+              to: 'https://spo-kissa.org/',
+            },
+            {
               label: 'Tutorial',
               to: '/docs/intro',
             },
@@ -111,16 +119,12 @@ const config: Config = {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
               label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              href: 'https://discord.com/invite/w7DYV3mSQb',
             },
             {
               label: 'X',
-              href: 'https://x.com/docusaurus',
+              href: 'https://x.com/spokissa',
             },
           ],
         },
@@ -133,7 +137,7 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/spo-kissa/spo-docs',
+              href: 'https://github.com/spo-kissa/spo-kissa.github.io',
             },
           ],
         },
