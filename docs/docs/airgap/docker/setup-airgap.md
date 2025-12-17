@@ -3,13 +3,14 @@ title: Docker Airgap の使い方
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import Mermaid from '@theme/Mermaid';
 
 ## Docker Airgap とは？
 
 1. Docker Airgap は Windows / macOS / Linux いずれの環境でも同様の操作性を提供します
 1. `cardano-cli`、`cardano-signer` コマンドが標準で付属します
 1. 各コマンドを簡単に扱うためのツール `ctool` というツールが付属しています
-    - `ctool` は `gtool` と連携しエアギャップで作業効率を向上させる事ができます
+    - `ctool` は `gtool` と連携しエアギャップでの作業効率を向上させます
 
 ## Docker Airgap をダウンロードする
 
@@ -57,7 +58,9 @@ import TabItem from '@theme/TabItem';
     .\start.bat
     ```
 
-    9. ターミナルのプロンプトが緑色で `cardano@xxxxxxx:~$` と表示されれば、初期設定は完了です
+    9. ターミナルのプロンプトが緑色で `cardano@xxxxxxxxxxxx:~$` と表示されれば、初期設定は完了です
+
+      ※ `xxxxxxxxxxxx` の部分はランダムに設定されます
 
     ![](/img/airgap/docker/win-airgap-started.png)
 
@@ -86,7 +89,9 @@ import TabItem from '@theme/TabItem';
     ./start.sh
     ```
 
-    7. ターミナルのプロンプトが緑色で `cardano@xxxxxxx:~$` と表示されれば、初期設定は完了です
+    7. ターミナルのプロンプトが緑色で `cardano@xxxxxxxxxxxx:~$` と表示されれば、初期設定は完了です
+
+      ※ `xxxxxxxxxxxx` の部分はランダムに設定されます
 
   </TabItem>
 </Tabs>
@@ -97,9 +102,23 @@ import TabItem from '@theme/TabItem';
 <Tabs groupId="operating-systems" queryString="os">
   <TabItem value="win" label="Windows">
     `Docker Airgap` の `/mnt/share/` ディレクトリと Windows の `airgap-ticker\share\` ディレクトリが共有ディレクトリとなり、ファイルやフォルダのやり取りが可能です
+
+    <Mermaid
+      value={`flowchart LR;
+        A(**Airgap**<br/>/mnt/share) ==>|files| B(**Windows**<br/>airgap-ticker\\\\share);
+        B ==>|files| A;`}
+    />
+
   </TabItem>
   <TabItem value="mac" label="macOS">
     `Docker Airgap` の `/mnt/share/` ディレクトリと macOS の `airgap-ticker/share/` ディレクトリが共有ディレクトリとなり、ファイルやフォルダのやり取りが可能です
+
+    <Mermaid
+      value={`flowchart LR
+        A(**Airgap**<br/>/mnt/share) ==>|files| B(**macOS**<br/>airgap-ticker/share);
+        B ==>|files| A;`}
+    />
+
   </TabItem>
 </Tabs>
 
