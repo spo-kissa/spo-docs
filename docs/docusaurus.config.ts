@@ -73,6 +73,10 @@ const config: Config = {
         theme: {
           customCss: './src/css/custom.css',
         },
+        gtag: {
+          trackingID: 'G-JQKRF76E7P',
+          anonymizeIP: true,
+        }
       } satisfies Preset.Options,
     ],
   ],
@@ -94,7 +98,11 @@ const config: Config = {
           position: 'left',
           label: 'Tutorial',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        // {to: '/blog', label: 'Blog', position: 'left'},
+        {
+          type: 'search',
+          position: 'right',
+        },
         {
           href: 'https://github.com/spo-kissa/spo-kissa.github.io',
           label: 'GitHub',
