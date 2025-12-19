@@ -14,6 +14,10 @@ const config: Config = {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
   },
 
+  plugins: [
+    'docusaurus-plugin-image-zoom',
+  ],
+
   // Set the production url of your site here
   url: 'https://docs.spo-kissa.org',
   // Set the /<baseUrl>/ pathname under which your site is served
@@ -161,6 +165,15 @@ const config: Config = {
     },
     mermaid: {
       theme: { light: 'neutral', dark: 'forest' },
+    },
+    zoom: {
+      selector: '.markdown :not(em) > img',
+      background: {
+        light: 'rgb(255, 255, 255)',
+        dark: 'rgb(50, 50, 50)'
+      },
+      config: {
+      },
     },
   } satisfies Preset.ThemeConfig,
 };
